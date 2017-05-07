@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Global warming</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="gcharts.js" charset="utf-8"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <img src="earth_night_rotate.jpg" alt="Earth" class="bg">
+    <!-- from NASA -->
+    <article>
+      <div class="intro">
+        <h1>Global warming</h1>
+        <h3>and its effects on Earth&#8217;s Arctic ice caps</h3>
+        <h3>by Rohan Ramesh</h3>
+        <p id="js">Please enable JavaScript to get the full experience.</p>
+        <script>
+          var element = document.getElementById('js');
+          element.parentNode.removeChild(element);
+        </script>
+      </div>
+
+      <h2>Introduction</h2>
+      <p>Read this quote from NASA:</p>
+      <blockquote>
+        <p>Arctic sea ice reaches its minimum each September. September Arctic sea ice is now declining at a rate of 13.3 percent per decade, relative to the 1981 to 2010 average.</p>
+      </blockquote>
+      <cite>
+        <a href="https://climate.nasa.gov/vital-signs/arctic-sea-ice/">
+          NASA Global Climate Change
+        </a>
+      </cite>
+      <p>OK, but <em>what&#8217;s so important</em> about it? This page attempts to answer that as well as possible.</p>
+
+      <h2>Data</h2>
+      <p>Here&#8217;s some data on the amount of ice each year come September. Also, click <a href="gccdata.csv">here</a> for a downloadable CSV that contains this data.</p>
+      <div id="chart_div"></div>
+      <div id="table_div"></div>
+      <p>
+        Source:
+        <cite>
+          <a href="https://climate.nasa.gov/vital-signs/arctic-sea-ice/">
+            NASA Global Climate Change
+          </a>
+        </cite>
+      </p>
+
+      <h2>Equation</h2>
+      <big>\(y = -0.0869x + 7.8799\).</big>
+      <ul>
+        <li>Where \(x\) is the number of years since 1979 and \(y\) is the sea ice area in millions of square kilometers, the best-fitting linear regression would be \(y = -0.0869x + 7.8799\). In other words, \(x\) is the independent variable and \(y\) is the dependent variable.</li>
+        <li>The correlation coefficient (\(r\)) in this instance is \(-0.8713\), a reasonably good but far from perfect value, okay for interpolating but not so good for extrapolating. It also says that the slope is negative.</li>
+        <li>Additionaly, if you prefer \(r ^ 2\) as your correlation coefficient, \(r ^ 2 = 0.7592\).</li>
+      </ul>
+
+      <h2>Practicalities</h2>
+      <ul>
+        <li>
+          <strong>Real-world significance:</strong>
+          As every year passes by, the amount of ice in the Arctic fluctuates. This data shows how much it fluctuates and when.
+        </li>
+        <li>
+          <strong>Interpolation and extrapolation:</strong>
+          <ul>
+            <li>
+              <strong>Interpolation:</strong>
+              \(y(20) = 6.1429\)
+            </li>
+            <li>
+              <strong>Extrapolation:</strong>
+              \(y(45) = 3.9716\)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>How does this affect out planet?</strong>
+          <ul>
+            <li>The less ice on the ice caps there are, the more endangered species that live there will grow. This is because the living conditions will not be as accessible, as food might grow scarce and areas of ice might start to break off and strand individual creatures or groups of creatures.</li>
+            <li>Tourist attractions in these areas will lose their appeal, and wonderful ice sculptures of mother natures will dissipate into ponds, lakes and oceans.</li>
+            <li>If the ice caps ever completely disappear, getting them back will prove to be an extremely tough-to-pull-off feat. This is because if the Earth gets too warm, it&#8217;ll take a while and a lot of effort for it to cool down once more, enough so that the ice caps begin to reappear.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>What can we do?</strong>
+          <ul>
+            <li>We can avoid creating emmisions, and use more eco-friendly tools to get about our daily lives.</li>
+            <li>We can avoid known environmental contaminants and greenhouse gas emitters.</li>
+            <li>We can continue to monitor this data to keep a tab on our progress in restoring the ice caps.</li>
+            <!--<li>UNIX users can (re)nice all their processes so that their CPUs don't overheat and melt Arctic ice.</li>-->
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </body>
+</html>
